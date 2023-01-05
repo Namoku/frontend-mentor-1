@@ -1,4 +1,5 @@
 import { Button } from "../components/Button";
+import { TextInput } from "../components/TextInput";
 import Foot from "./Foot";
 import styles from "./page.module.css";
 
@@ -8,7 +9,8 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.body}>
           <section>
-            Bill Select Tip % Number of People
+            <TextInput placeholder="0" icon="dollar" title="Bill" />
+            Select Tip %
             <div className={styles.buttonContainer}>
               <Button title="5%" />
               <Button title="10%" />
@@ -17,6 +19,7 @@ export default function Home() {
               <Button title="50%" />
               <Button title="Custom" />
             </div>
+            <TextInput placeholder="0" icon="person" title="Number of People" />
           </section>
           <section>
             Tip Amount / person Total / person

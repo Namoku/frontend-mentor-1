@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  color: var(--secondary);
+  border: 0;
+  width: 100%;
+  background-color: inherit;
+}
+.input::placeholder {
+  color: var(--third);
+}
+
+.inputContainer {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 15px;
+}

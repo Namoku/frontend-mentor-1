@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css2?family=Space+Mono);
 
+:root {
+  --primary: hsl(172, 67%, 45%);
+  --secondary: hsl(183, 100%, 15%);
+  --third: hsl(184, 14%, 56%);
+  --main-color-bg: hsl(185, 41%, 84%);
+}
+
 html,
 body {
   height: 100%;
@@ -8,27 +15,28 @@ body {
   font-size: 24px;
   font-weight: 700;
   font-family: "Space Mono";
-  background-color: hsl(185, 41%, 84%);
+  background-color: var(--main-color-bg);
 }
 
-button {
+button,
+input {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
 }
 
 .primary {
-  color: hsl(172, 67%, 45%);
+  color: var(--primary);
 }
 
 .primary-background {
-  color: hsl(183, 100%, 15%);
-  background-color: hsl(172, 67%, 45%);
+  color: var(--secondary);
+  background-color: var(--primary);
 }
 
 .secondary-background {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(183, 100%, 15%);
+  color: white;
+  background-color: var(--secondary);
 }
 
 .attribution {
