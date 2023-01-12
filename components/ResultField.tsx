@@ -1,3 +1,5 @@
+import style from "./ResultField.module.css";
+
 type ResultFieldProps = {
   title: string;
   subtitle: string;
@@ -5,12 +7,12 @@ type ResultFieldProps = {
 };
 export const ResultField = ({ title, subtitle, amount }: ResultFieldProps) => {
   return (
-    <div>
+    <div className={style.container}>
       <section>
-        <article>{title}</article>
-        <article>/ {subtitle}</article>
+        <article className={style.title}>{title}</article>
+        <article className={style.subtitle}>/ {subtitle}</article>
       </section>
-      <section>${amount}</section>
+      <section className={style.amount}>${amount}</section>
     </div>
   );
 };

@@ -1,0 +1,19 @@
+.title {
+  color: white;
+}
+
+.subtitle {
+  color: var(--main-color-bg);
+  font-size: 0.75rem;
+}
+.amount {
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
