@@ -27,7 +27,7 @@ export default function Home() {
           <section className={styles.actionContainer}>
             <ResultField title="Tip Amount" subtitle="person" amount={0} />
             <ResultField title="Total" subtitle="person" amount={0} />
-            <Button title="Reset" />
+            <Button title="Reset" type="secondary" />
           </section>
         </div>
       </main>
