@@ -1,8 +1,10 @@
 .button {
   border-radius: 8px;
   padding: 5px;
-  min-width: 8vw;
+  min-width: 4.5rem;
+  min-height: 2.2rem;
   border: 0px;
+  transition: 0.2s;
 }
 
 .button:hover {

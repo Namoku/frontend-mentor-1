@@ -7,6 +7,10 @@
   --main-color-bg: hsl(185, 41%, 84%);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;

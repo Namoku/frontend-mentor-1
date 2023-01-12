@@ -8,20 +8,22 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <div className={styles.body}>
-          <section>
+          <section className={styles.container}>
             <TextInput placeholder="0" icon="dollar" title="Bill" />
-            Select Tip %
-            <div className={styles.buttonContainer}>
-              <Button title="5%" />
-              <Button title="10%" />
-              <Button title="15%" />
-              <Button title="25%" />
-              <Button title="50%" />
-              <Button title="Custom" />
+            <div>
+              Select Tip %
+              <div className={styles.buttonContainer}>
+                <Button title="5%" />
+                <Button title="10%" />
+                <Button title="15%" />
+                <Button title="25%" />
+                <Button title="50%" />
+                <Button title="Custom" />
+              </div>
             </div>
             <TextInput placeholder="0" icon="person" title="Number of People" />
           </section>
-          <section>
+          <section className={styles.actionContainer}>
             Tip Amount / person Total / person
             <Button title="Reset" />
           </section>
