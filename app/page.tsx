@@ -1,4 +1,5 @@
 import { Button } from "../components/Button";
+import { ResultField } from "../components/ResultField";
 import { TextInput } from "../components/TextInput";
 import Foot from "./Foot";
 import styles from "./page.module.css";
@@ -24,7 +25,8 @@ export default function Home() {
             <TextInput placeholder="0" icon="person" title="Number of People" />
           </section>
           <section className={styles.actionContainer}>
-            Tip Amount / person Total / person
+            <ResultField title="Tip Amount" subtitle="person" amount={0} />
+            <ResultField title="Total" subtitle="person" amount={0} />
             <Button title="Reset" />
           </section>
         </div>
