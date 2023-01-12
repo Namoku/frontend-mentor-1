@@ -25,8 +25,10 @@ export default function Home() {
             <TextInput placeholder="0" icon="person" title="Number of People" />
           </section>
           <section className={styles.actionContainer}>
-            <ResultField title="Tip Amount" subtitle="person" amount={0} />
-            <ResultField title="Total" subtitle="person" amount={0} />
+            <article className={styles.container}>
+              <ResultField title="Tip Amount" subtitle="person" amount={0} />
+              <ResultField title="Total" subtitle="person" amount={0} />
+            </article>
             <Button title="Reset" type="secondary" />
           </section>
         </div>
