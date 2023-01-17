@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
 }
 
 .input {
@@ -10,8 +11,17 @@
   background-color: inherit;
   text-align: right;
 }
+
 .input::placeholder {
   color: var(--third);
+}
+
+.input:focus,
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .inputContainer {

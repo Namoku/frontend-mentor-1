@@ -1,4 +1,5 @@
 import { Button } from "../components/Button";
+import { Container } from "../components/Container";
 import { ResultField } from "../components/ResultField";
 import { TextInput } from "../components/TextInput";
 import Foot from "./Foot";
@@ -11,7 +12,7 @@ export default function Home() {
         <div className={styles.body}>
           <section className={styles.container}>
             <TextInput placeholder="0" icon="dollar" title="Bill" />
-            <div>
+            <Container>
               Select Tip %
               <div className={styles.buttonContainer}>
                 <Button title="5%" />
@@ -21,7 +22,7 @@ export default function Home() {
                 <Button title="50%" />
                 <Button title="Custom" />
               </div>
-            </div>
+            </Container>
             <TextInput placeholder="0" icon="person" title="Number of People" />
           </section>
           <section className={styles.actionContainer}>
