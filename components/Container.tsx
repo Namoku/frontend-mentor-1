@@ -1,6 +1,10 @@
 import { ReactElement } from "react";
 import styles from "./Container.module.css";
 
-export const Container = ({ children }: { children: ReactElement }) => {
+type ContainerProps = {
+  children: Array<ReactElement | string> | ReactElement | string;
+};
+
+export const Container = ({ children }: ContainerProps) => {
   return <div className={styles.container}>{children}</div>;
 };
