@@ -2,22 +2,38 @@
 import { Button } from "./Button";
 import { Container } from "./Container";
 import styles from "./ButtonContainer.module.css";
-import { MouseEventHandler } from "react";
+import { useState } from "react";
 
 export const ButtonContainer = () => {
-  const handleClick = (event: MouseEventHandler) => {
-    console.log(event);
+  const [selected, setSelected] = useState<undefined | string>();
+
+  const handleClick = (event: Event) => {
+    const target = event.target as HTMLInputElement;
+    setSelected(target.value);
   };
+
+  const Buttons = [
+    { title: "5%", value: 5, selected: selected == "5" },
+    { title: "10%", value: 10, selected: selected == "10" },
+    { title: "15%", value: 15, selected: selected == "15" },
+    { title: "25%", value: 25, selected: selected == "25" },
+    { title: "50%", value: 50, selected: selected == "50" },
+    { title: "Custom" },
+  ];
+
   return (
     <Container>
       Select Tip %
       <div className={styles.buttonContainer}>
-        <Button title="5%" onClick={handleClick} />
-        <Button title="10%" onClick={handleClick} />
-        <Button title="15%" onClick={handleClick} />
-        <Button title="25%" onClick={handleClick} />
-        <Button title="50%" onClick={handleClick} />
-        <Button title="Custom" onClick={handleClick} />
+        {Buttons.map(({ title, value, selected }, index) => (
+          <Button
+            key={index}
+            title={title}
+            value={value}
+            selected={selected}
+            onClick={handleClick}
+          />
+        ))}
       </div>
     </Container>
   );
